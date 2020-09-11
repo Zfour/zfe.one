@@ -101,24 +101,33 @@ body{overflow-x: hidden;};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.icon-bilibili-line:before {
-  content: "\e900";
-  color: #fff;
-}
-.icon-uniE902:before {
+.icon-weibo:before {
   content: "\e902";
-  color: #fff;
-}
-.icon-steam:before {
-  content: "\e901";
   color: #fff;
 }
 .icon-uniE903:before {
   content: "\e903";
   color: #fff;
 }
-.icon-mail:before {
-  content: "\ea83";
+.icon-steam:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-bilibili-line:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-images:before {
+  content: "\e90e";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-pacman:before {
+  content: "\e916";
+}
+.icon-mail4:before {
+  content: "\ea86";
 }
 .icon-github:before {
   content: "\eab0";
@@ -126,6 +135,7 @@ body{overflow-x: hidden;};
 .icon-chrome:before {
   content: "\ead9";
 }
+
 meter::-webkit-meter-bar {
 
   background: #FFF;
