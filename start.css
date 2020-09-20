@@ -160,3 +160,5 @@ meter::-webkit-meter-even-less-good-value {
   background: linear-gradient(to bottom, #60a917, #60a917);
 height:5px;
 }
+   .aplayer-pic{height:70px !important;width:70px !important}
+       .aplayer{margin: 0px !important}   
