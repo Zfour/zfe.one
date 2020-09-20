@@ -161,4 +161,10 @@ meter::-webkit-meter-even-less-good-value {
 height:5px;
 }
    .aplayer-pic{height:70px !important;width:70px !important}
-       .aplayer{margin: 0px !important}   
+       .aplayer{margin: 0px !important;border-radius: 0px!important;width:310px !important}   
+	   .aplayer.aplayer-withlrc .aplayer-lrc {
+    display: none !important
+}
+.aplayer-icon-menu{
+    display: none !important
+}
