@@ -14,7 +14,7 @@
    <meta property="og:image" content="http://zfe.space/images/headimage.png">
     <link rel="shortcut icon" href=" favicon.ico" type="image/x-icon">
     <link rel="icon" href=" favicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="APlayer.min.css">
     <link href="metro-all.css?ver=@@b-version" rel="stylesheet">
     <link href="start.css" rel="stylesheet">
    
@@ -44,7 +44,7 @@
 				<a target="_blank" data-role="tile" data-size="small" style="background-color: #fc3">
                      <span class="fa icon-weibo icon"></span>
                 </a>
-			
+			    <div id="aplayer" data-role="tile" data-size="wide" ></div>
 				
                 <div id="weather-v2-plugin-standard" data-role="tile" data-size="wide" ></div>
 <script>
@@ -153,7 +153,7 @@ WIDGET = {
 
             <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="盒子导航（搭建中）">
                 <a data-role="tile"   data-cover="box.png" >
-                    <span class="branding-bar">盒子</span>
+                    <span  class="branding-bar">盒子</span>
 					<span class="badge-top">0</span>
                 </a>
                 <a data-role="tile"   style="background-color: #727272" >
@@ -211,11 +211,25 @@ WIDGET = {
 		<p>Powered By <a target="_blank"  style="   color: #ffffff;" href="https://metroui.org.ua/index.html ">Metro 4</a></p>
     </div>
     </div>
+	
+<meting-js
+	server="netease"
+	type="playlist"
+	id="370673384"
+</meting-js>
 
 
-     <script async src="busuanzi.js"></script>      
+    <script src="APlayer.min.js"></script>
+<script async src="busuanzi.js"></script>
     <script src="metro.js"></script>
     <script src="start.js"></script>
+	<script src="Meting.min.js"></script>
+    <script >	const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [{
+       
+    }]
+});</script>
 
 </body>
 </html>
