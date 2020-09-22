@@ -428,7 +428,7 @@ var JustAddMusic = function () {
 		key: "_decode",
 		value: function _decode(data) {
 			this._context.decodeAudioData(data, this._handleBufferDecode.bind(this));
-			this._updateUI("decoding...");
+			this._updateUI("可视化加载中...");
 		}
 
 		// UI:
