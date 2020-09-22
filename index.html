@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="APlayer.min.css">
     <link href="metro-all.css?ver=@@b-version" rel="stylesheet">
     <link href="start.css" rel="stylesheet">
-	
+	<link href="justaddmusic.css" rel="stylesheet">
 
 	
     <title>ZFE.ONE</title>
 </head>
 <body  class="bg-dark fg-white h-vh-100 m4-cloak">
+
 
     <div class="container-fluid start-screen h-100 main" style="backdrop-filter: blur(10px);width:100%;overflow-x:hidden">
         <h1 class="start-screen-title">ZFE.ONE</h1> 
@@ -209,6 +210,7 @@ WIDGET = {
             </div>
 
         </div>
+		<div class="musiccontainer" id="container" style="position: fixed; right:0; bottom:0;"></div>
 		<div id="footer">
         <p>© 2020 By ZFE</p>
 		<p>Powered By <a target="_blank"  style="   color: #ffffff;" href="https://metroui.org.ua/index.html ">Metro 4</a></p>
@@ -216,14 +218,67 @@ WIDGET = {
     </div>
 	
 
-
+    <script src="JustAddMusic.js"></script>
     <script src="jquary.js"></script>
     <script src="APlayer.min.js"></script>
-    <script async src="busuanzi.js"></script>
+   <!-- <script async src="busuanzi.js"></script>-->
     <script src="metro.js"></script>
     <script src="start.js"></script>
 	<script src="Meting.min.js"></script>
+<script>
 
+
+		// how many bars do we want to draw? Max of 128.
+		var bars = 128, hue=320;
+
+		// add the bar elements to the container div:
+		for (var i=0; i<bars; i++) {
+			var bar = document.createElement("div");
+			bar.className = "bar";
+			container.appendChild(bar);
+		}
+		
+		// create a new JAM instance:
+		var jam = new JustAddMusic({
+			 // default audio to load:
+			 
+			paused:true,
+			deltaT:150,
+              avgT:150,
+			// label text to include in the UI (bottom left)
+			<!--label: "<b>JustAddMusic.js </b>", -->
+			volume:0,
+			// set the number of spectrum values we'd like to get back:
+			spectrumBins: bars,
+
+			// the ontick callback, called 60 time per second by default
+			// with the latest audio data object as the only parameter
+			ontick: function(o) {
+				// change the base hue value on a bass hit:
+				if (o.low.hit) { hue = (hue+100)%360; }
+
+				for (var i=0; i<bars; i++) {
+					// update bars based on the spectrum values:
+					var style = container.childNodes[i].style, val = o.spectrum[i];
+					style.height = val*20+"%";
+					style.background = "hsl("+ (hue-val*180) +","+ (val*50+50) +"%,"+ (val*40+20) +"%)";
+				}
+			}
+		});
+ 
+setTimeout(function(){	 
+
+jam.loadAudio(ap.audio.currentSrc);
+
+console.log(ap.audio.currentSrc)},500);
+
+
+
+    
+	</script>
+<script>
+
+</script>
 <!--<script src="getmusicurl.js"></script>-->
 
 </body>

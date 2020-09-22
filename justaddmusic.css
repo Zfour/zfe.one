@@ -1,0 +1,24 @@
+	body {
+			margin:0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			
+		}
+		.jam-drop { border: solid 20px #CF3;  } /* draw an outline when a file is dragged over the drop target */
+		.jam-ui { display:none!important;font-size: 2px; } /* make the UI text a bit bigger than usual */
+
+		.musiccontainer {
+			 
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			align-content: stretch;
+			align-items: flex-end;
+			pointer-events: none;
+		}
+		.bar {
+			margin: 0 1px;
+			flex: 1;
+		}
