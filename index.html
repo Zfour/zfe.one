@@ -49,8 +49,7 @@
 				
 			   
                 <div id="weather-v2-plugin-standard" data-role="tile" data-size="wide" ></div>
-					 <div data-role="tile"  style="height:70px" data-order="random" data-size="wide" data-lrc-type="1" class="aplayer bg-black" data-id="5249407673" data-server="netease" data-type="playlist" data-list-folded="true"  
-        data-volume="1.0"></div>
+				
 <script>
 WIDGET = {
   CONFIG: {
@@ -211,17 +210,19 @@ WIDGET = {
 
         </div>
 		<div class="musiccontainer" id="container" style="position: fixed; right:0; bottom:0;"></div>
+			 <div    data-fixed="true" data-order="random" data-size="wide"  class="aplayer" data-id="5249407673" data-server="netease" data-type="playlist" data-list-folded="true"  
+        data-volume="1.0"></div>
 		<div id="footer">
         <p>© 2020 By ZFE</p>
 		<p>Powered By <a target="_blank"  style="   color: #ffffff;" href="https://metroui.org.ua/index.html ">Metro 4</a></p>
     </div>
     </div>
 	
-
+    <script src="jquary.js"></script>
     <script src="JustAddMusic.js"></script>
     <script src="jquary.js"></script>
-    <script src="APlayer.min.js"></script>
-<script async src="busuanzi.js"></script>
+    <script src="APlayer.min.jam.js"></script>
+<!--<script async src="busuanzi.js"></script>-->
     <script src="metro.js"></script>
     <script src="start.js"></script>
 	<script src="Meting.min.js"></script>
@@ -269,7 +270,21 @@ WIDGET = {
 setTimeout(function(){	 
 
 jam.loadAudio(ap.audio.currentSrc);
-
+$(".aplayer-list").click(function(){
+	              ap.volume(0, true);
+  				  setTimeout(function(){jam.loadAudio(ap.audio.currentSrc);console.log(ap.audio.currentSrc)},500);
+				  setTimeout(function(){ap.play();ap.seek(0);jam.seek(0);ap.volume(1, true)},4000);
+});
+$(".aplayer-icon-back").click(function(){
+	              ap.volume(0, true);
+  				  setTimeout(function(){jam.loadAudio(ap.audio.currentSrc);console.log(ap.audio.currentSrc)},500);
+				  setTimeout(function(){ap.play();ap.seek(0);jam.seek(0);ap.volume(1, true)},4000);
+});
+$(".aplayer-icon-forward").click(function(){
+	              ap.volume(0, true);
+  				  setTimeout(function(){jam.loadAudio(ap.audio.currentSrc);console.log(ap.audio.currentSrc)},500);
+				  setTimeout(function(){ap.play();ap.seek(0);jam.seek(0);ap.volume(1, true)},4000);
+});
 console.log(ap.audio.currentSrc)},1500);
 
 

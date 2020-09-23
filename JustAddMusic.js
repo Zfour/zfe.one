@@ -643,6 +643,3 @@ JustAddMusic.DEFAULT_AUDIO_DATA = {
 	high: JustAddMusic.DEFAULT_FREQUENCY_RANGE,
 	all: JustAddMusic.DEFAULT_FREQUENCY_RANGE
 };
-
-console.log("\n %c JustAddMusic 30b23c7 %c https://github.com/gskinner/JustAddMusic \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;")
-console.log("\n %c APlayerÃ—MetingÃ—JustAddMusic 7e672fb %c https://github.com/zfour/APlayer-Meting-JustAddMusic \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;")

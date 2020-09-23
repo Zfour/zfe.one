@@ -6,7 +6,7 @@
 			
 		}
 		.jam-drop { border: solid 20px #CF3;  } /* draw an outline when a file is dragged over the drop target */
-		.jam-ui { font-size: 2px; } /* make the UI text a bit bigger than usual */
+		.jam-ui { background: #e6e6e6;color: #666!important;font-size: 2px; } /* make the UI text a bit bigger than usual */
 
 		.musiccontainer {
 			 

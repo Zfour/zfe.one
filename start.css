@@ -160,11 +160,45 @@ meter::-webkit-meter-even-less-good-value {
   background: linear-gradient(to bottom, #60a917, #60a917);
 height:5px;
 }
-   .aplayer-pic{height:70px !important;width:70px !important}
-       .aplayer{margin: 0px !important;border-radius: 0px!important;width:310px !important}   
-	   .aplayer.aplayer-withlrc .aplayer-lrc {
-    display: none !important
+.aplayer-body{    position: fixed;
+    top: 594px!important;
+    left: 80px!important;
+	    width: 310px!important;
+	}
+.aplayer.aplayer-fixed .aplayer-list {
+    margin-bottom: 0px!important;
+    border: 0px solid #eee;
+    border-bottom: none;
 }
-.aplayer-icon-menu{
-    display: none !important
+.aplayer.aplayer-fixed {
+    position: fixed;
+    top: 594px!important;
+    left: 80px!important;
+    z-index: 99;
+    max-width: 310px!important;
 }
+.aplayer .aplayer-lrc p {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", sans-serif;
+	font-weight: 600;
+	color: #ffffff;
+	    text-shadow: 0px 0px 0 #666;
+font-size: 0.8rem;}
+.aplayer-title {
+        color: #666!important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+ padding-top:1px!important;
+    min-height: 30px!important;
+}
+.aplayer-lrc{
+  
+}
+.aplayer-list{
+  margin-top:66px;
+  max-height:180px!important;
+  
+}
+.aplayer .aplayer-list ol {
+	max-height:180px!important;
+	}
+	
