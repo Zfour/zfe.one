@@ -19,6 +19,12 @@
   margin-left: 0;
   margin-top: 50px;
 }
+@media all and (max-width: 768px) {
+.aplayer {
+    display: none;
+  }
+}
+
 @media all and (min-width: 768px) {
   .start-screen-title {
     display: block;
